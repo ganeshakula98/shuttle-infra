@@ -7,27 +7,33 @@ import { SVGService } from './svg.service';
 export class DroppableDirective {
   private draggingElement: any;
 
-  constructor(private svgService: SVGService) {}
+  constructor(private svgService: SVGService) { }
 
   @HostListener('drop', ['$event'])
   onDrop(event: any) {
-    const dropzone = event.target;
+    const dropzone = event.target as SVGElement;
     const droppedElementId = event.dataTransfer.getData('text');
     const droppedElement = document.getElementById(droppedElementId) as any;
 
-    dropzone.appendChild(droppedElement);
+    const copyDiv = droppedElement.cloneNode(true);
+    const copySvg = copyDiv.childNodes[0] as SVGElement;
+    const dropLocation = dropzone.getBoundingClientRect();
 
-    droppedElement.setAttribute('draggable', true);
+    copySvg.setAttribute('x', String(event.clientX - dropLocation.x));
+    copySvg.setAttribute('y', String(event.clientY - dropLocation.y));
 
-    const svgPoint = this.svgService.getSVGPoint(event, droppedElement);
-    this.setPosition(droppedElement, { x: svgPoint.x, y: svgPoint.y  });
+    copySvg.setAttribute('height', '50');
+    copySvg.setAttribute('width', '50');
+
+    console.log(copySvg);
+    dropzone.appendChild(copySvg);
   }
 
   @HostListener('mousemove', ['$event'])
   onMouseMove(event: any): void {
     if (this.draggingElement) {
       const svgPoint = this.svgService.getSVGPoint(event, this.draggingElement);
-      this.setPosition(this.draggingElement, { x: svgPoint.x, y: svgPoint.y  });
+      this.setPosition(this.draggingElement, { x: svgPoint.x, y: svgPoint.y });
     }
   }
 

@@ -10,7 +10,7 @@ export class DraggableDirective {
 
   @HostListener('dragstart', ['$event'])
   onDragStart(event: any) {
-    console.log('drag start')
+    console.log('drag start');
     const elementId = event.target.id;
     // it will all the possible id and text that is required, which can be sent to dropZone
     event.dataTransfer.setData('text', elementId);

@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class SvgComponent {
 
   allowDrop(ev: any) {
-    console.log(ev);
+    // console.log(ev);
     
     ev.preventDefault();
   }
