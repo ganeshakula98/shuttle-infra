@@ -1,0 +1,41 @@
+<div class="items-container">
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+        <defs>
+            <rect width="100" height="100" fill="none" style="stroke-width:3;stroke:yellow" />
+            <image id="Azure" x="10" y="10" width="80" height="80" xlink:href="https://picsum.photos/id/1/100/100" />
+        </defs>
+    </svg> -->
+    <div appDraggable id="g2g">
+        <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+            <image href="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png"
+                height="50" width="50" />
+        </svg>
+
+    </div>
+    <!-- <div appDraggable>
+        <svg width="100" height="100" viewBox="0 0 100 100">
+            <g tabindex="0" transform="translate()" id="test" cursor="default" opacity="1"
+                pointer-events="visiblePainted" class="jss315">
+                <g>
+                    <g transform="translate(5, -16)"><text x="25" y="0" text-anchor="middle"
+                            alignment-baseline="central" fill="black" class="jss327">
+                            <tspan>azurerm ARC kubernetes cluster extension</tspan>
+                        </text></g>
+                    <rect width="60" height="60" rx="4" x="0" y="0" fill="white" stroke="black" stroke-width="1.5"
+                        stroke-dasharray="" class="jss316"></rect>
+                    <g transform="translate(5, 5)"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 50 50"
+                            aria-hidden="true" width="50" height="50">
+                            <use href="#Azure"></use>
+                        </svg></g>
+                </g>
+            </g>
+        </svg>
+    </div> -->
+
+    <div class="svg-container" appDroppable (drop)="dropHandler($event)" (dragover)="allowDrop($event)">
+        <svg id="dropzone" height="100%" width="100%">
+
+        </svg>
+    </div>
+
+</div>

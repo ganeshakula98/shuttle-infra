@@ -1,0 +1,20 @@
+<div class="wrapper">
+    <mat-toolbar>
+        <div fxLayout="row" fxLayoutAlign="space-between center" fxFlex>
+            <div class="left-pane">
+                <div class="title">Shuttle Infra</div>
+            </div>
+            <div class="right-pane" fxLayout="row">
+                <div class="profile" [matMenuTriggerFor]="menu">GA</div>
+                <!-- <button mat-button [matMenuTriggerFor]="menu">Name</button> -->
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item>
+                        <mat-icon>logout</mat-icon>
+                        <span>Sign Out</span>
+                    </button>
+                </mat-menu>
+            </div>
+        </div>
+    </mat-toolbar>
+
+</div>
