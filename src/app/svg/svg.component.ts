@@ -10,11 +10,11 @@ export class SvgComponent {
   allowDrop(ev: any) {
     // console.log(ev);
     
-    ev.preventDefault();
+    // ev.preventDefault();
   }
 
   dropHandler(e: any) {
-    console.log(e);
+    // console.log(e);
     
   }
 
