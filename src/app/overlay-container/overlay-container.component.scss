@@ -1,0 +1,15 @@
+@import "../../theme.scss";
+
+.overlay {
+  text-align: center;
+
+  .title {
+    font-weight: 600;
+
+  }
+   
+  button {
+    background-color: $primary;
+    color: white;
+  }
+}

@@ -32,8 +32,11 @@
         </svg>
     </div> -->
 
-    <div class="svg-container" appDroppable (drop)="dropHandler($event)" (dragover)="allowDrop($event)">
+    <div class="svg-container" appDroppable>
         <svg id="dropzone" height="500px" width="500px" x="100" y="100">
+            <foreignObject x="30" y="40" width="40px" height="40px">
+                <p>test</p>
+            </foreignObject>
 
         </svg>
     </div>

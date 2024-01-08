@@ -12,6 +12,8 @@ import { SvgComponent } from './svg/svg.component';
 import { DroppableDirective } from './droppable.directive';
 import { DraggableDirective } from './draggable.directive';
 import { SvgTestComponent } from './svg-test/svg-test.component';
+import { OverlayContainerComponent } from './overlay-container/overlay-container.component';
+import { OpenOverlayContainerDirective } from './open-overlay-container.directive';
 
 
 export function initializeApp(themeService: ThemeService) {
@@ -26,7 +28,9 @@ export function initializeApp(themeService: ThemeService) {
     SvgComponent,
     DroppableDirective,
     DraggableDirective,
-    SvgTestComponent
+    SvgTestComponent,
+    OverlayContainerComponent,
+    OpenOverlayContainerDirective
   ],
   imports: [
     BrowserModule,

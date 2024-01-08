@@ -1,7 +1,7 @@
 import { Theme } from "./theme"
 
 export const apiTheme: Theme = {
-    'primary': 'grey',
+    'primary': '#714eff',
     'accent': 'grey',
     'warn': 'orange',
     'fontFamily': '"Times New Roman", Times, serif'
